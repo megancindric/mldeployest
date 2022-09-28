@@ -12,14 +12,14 @@ function App() {
 
   async function getAllSongs() {
     let response = await axios.get(
-      "http://mlbackend-env.eba-x4jcnfu2.us-east-1.elasticbeanstalk.com/api/music/"
+      "https://cors-anywhere.herokuapp.com/http://mlbackend-env.eba-x4jcnfu2.us-east-1.elasticbeanstalk.com/api/music/"
     );
     setSongs(response.data);
   }
 
   async function AddNewMusic(newSong) {
     let response = await axios.post(
-      "http://mlbackend-env.eba-x4jcnfu2.us-east-1.elasticbeanstalk.com/api/music/",
+      "http://mlbackend-env.eba-x4jcnfu2.us-east-1.elasticbeanstalk.com/api/music/http://mlbackend-env.eba-x4jcnfu2.us-east-1.elasticbeanstalk.com/api/music/",
       newSong
     );
     if (response.status === 201) {
